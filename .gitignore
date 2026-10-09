@@ -1,0 +1,4 @@
+.env
+.venv/
+pipeline.log
+__pycache__/

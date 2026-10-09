@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${PG_USER:?PG_USER must be set in .env}
+      POSTGRES_PASSWORD: ${PG_PASSWORD:?PG_PASSWORD must be set in .env}
+      POSTGRES_DB: ${PG_DB:?PG_DB must be set in .env}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d atelierconfort"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin_ui
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  pgadmin_data:

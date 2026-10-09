@@ -1,0 +1,8 @@
+id_client,nom,prenom,email,date_naissance,ville,date_creation_compte
+CL001,Moreau,Julie,julie.moreau@mail.fr,1985-04-12,Lyon,2019-03-01
+CL003,Bernard,Marc,marc.bernard@mail.fr,1990-07-12,Nantes,2020-11-05
+CL004,Petit,Sophie,sophie.petit@mail.fr,1978-11-30,Lille,2018-06-15
+CL006,Dubois,Ahmed,ahmed.dubois@mail.fr,2001-02-18,Marseille,2022-07-09
+CL007,Lefevre,,claire.lefevre@mail.fr,1995-09-05,Paris,2020-02-14
+CL008,Garcia,Elena,elena.garcia@mail.fr,1988-01-01,Toulouse,2017-05-01
+CL009,Roux,Thomas,,1999-12-25,Bordeaux,2023-03-11

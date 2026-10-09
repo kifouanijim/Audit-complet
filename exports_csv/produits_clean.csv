@@ -1,0 +1,9 @@
+id_produit,nom_produit,categorie,prix_ht,stock_disponible,prix_a_verifier
+P001,Canapé Oslo 3 places,Salon,899.0,12,False
+P003,Table basse Malmö,Salon,249.9,34,False
+P004,Lampadaire Nova,Luminaire,79.9,58,False
+P006,Chaise Bistrot,Salle à manger,65.0,,False
+P007,Buffet scandinave,Salle à manger,540.0,7,False
+P008,Coussin Lin,Déco,19.9,,False
+P009,Tapis Berbère,Déco,129.0,22,False
+P010,Étagère modulable,Rangement,3450.0,15,True
